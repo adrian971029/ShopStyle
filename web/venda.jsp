@@ -66,7 +66,7 @@
                         <form class="form-signin" method="post" action="Venda">
                             <div class="form-group">
                                 <label for="usr">Quantidade:</label>
-                                <input type="text" class="form-control" id="usr" name="pd1">
+                                <input class="form-control" type="number" value="1" id="usr" name="pd1">
                             </div>
                             <p class="card-text">Valor da Unidade: R$20,00</p>
                             <button class="btn btn-lg btn-primary btn-block" type="submit" name="button" value="button2">Comprar</button>
@@ -110,7 +110,7 @@
                         <form class="form-signin" method="post" action="Venda">
                             <div class="form-group">
                                 <label for="usr1">Quantidade:</label>
-                                <input type="text" class="form-control" id="usr1" name="pd2">
+                                <input class="form-control" type="number" value="1" id="usr1" name="pd2">
                             </div>
                             <p class="card-text">Valor da Unidade: R$45,00 </p>
                             <button class="btn btn-lg btn-primary btn-block" type="submit" name="button" value="button2">Comprar</button>
@@ -155,7 +155,7 @@
                         <form class="form-signin" method="post" action="Venda">
                             <div class="form-group">
                                 <label for="usr2">Quantidade:</label>
-                                <input type="text" class="form-control" id="usr2" name="pd3">
+                                <input class="form-control" type="number" value="1" id="usr2" name="pd3">
                             </div>
                             <p class="card-text">Valor da Unidade: R$12,00</p>
                             <button class="btn btn-lg btn-primary btn-block" type="submit" name="button" value="button2">Comprar</button>

@@ -1,0 +1,68 @@
+body {
+    align-items: center;
+    margin: auto;
+    font-family: sans-serif;
+    color: #2d3c49;
+    height: 100%;
+}
+
+html {
+    height: 100%;
+}
+
+.titulo {
+    font-size: 38px;
+}
+
+.subtitulo {
+    font-size: 26px;
+    text-align: end;
+}
+
+.principal {
+    height: auto;
+}
+
+.portafolio {
+    opacity: 0.9
+}
+
+.btn {
+    opacity: 0.9
+}
+
+.portafolio__lista {
+    padding: 0;
+    list-style: none;
+}
+
+.portafolio__lista_cont {
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.featured_work {
+    font-size: 32px;
+    text-align: center;
+}
+
+.texPers {
+    color: #dddddd;
+}
+
+@media screen and (min-width: 340px) {
+    .logo {
+        margin-left: 0;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .titulo {
+        font-size: 64px;
+    }
+
+    .featured_work {
+        font-size: 48px;
+    }
+}

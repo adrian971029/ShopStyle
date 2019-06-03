@@ -20,6 +20,8 @@ public class Venda extends HttpServlet {
 
         VendaDao vendaDao = new VendaDao();
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+        String formatComprovanteData = new SimpleDateFormat("dd/MM/yyyy").format(Calendar.getInstance().getTime());
+        String formatComprovanteHora = new SimpleDateFormat("HH:mm").format(Calendar.getInstance().getTime());
 
         switch (produto) {
             case "1":
@@ -30,8 +32,11 @@ public class Venda extends HttpServlet {
                         valor = valor * 20;
                         modelo.Venda venda = new modelo.Venda(AtomicNumber.generateAtomicNumber(), timeStamp,valor);
                         vendaDao.insert(venda);
-                        request.getSession().setAttribute("venda", "ok");
-                        response.sendRedirect("welcome.jsp");
+                        request.getSession().setAttribute("qtd", qtd);
+                        request.getSession().setAttribute("vlr", String.valueOf(valor));
+                        request.getSession().setAttribute("dt", formatComprovanteData);
+                        request.getSession().setAttribute("hr", formatComprovanteHora);
+                        response.sendRedirect("comprovante.jsp");
                     } catch (NumberFormatException e) {
                         e.printStackTrace();
                     }
@@ -45,8 +50,11 @@ public class Venda extends HttpServlet {
                         valor = valor * 45;
                         modelo.Venda venda = new modelo.Venda(AtomicNumber.generateAtomicNumber(), timeStamp, valor);
                         vendaDao.insert(venda);
-                        request.getSession().setAttribute("venda", "ok");
-                        response.sendRedirect("welcome.jsp");
+                        request.getSession().setAttribute("qtd", qtd1);
+                        request.getSession().setAttribute("vlr", String.valueOf(valor));
+                        request.getSession().setAttribute("dt", formatComprovanteData);
+                        request.getSession().setAttribute("hr", formatComprovanteHora);
+                        response.sendRedirect("comprovante.jsp");
                     } catch (NumberFormatException e) {
                         e.printStackTrace();
                     }
@@ -60,8 +68,11 @@ public class Venda extends HttpServlet {
                         valor = valor * 12;
                         modelo.Venda venda = new modelo.Venda(AtomicNumber.generateAtomicNumber(), timeStamp, valor);
                         vendaDao.insert(venda);
-                        request.getSession().setAttribute("venda", "ok");
-                        response.sendRedirect("welcome.jsp");
+                        request.getSession().setAttribute("qtd", qtd2);
+                        request.getSession().setAttribute("vlr", String.valueOf(valor));
+                        request.getSession().setAttribute("dt", formatComprovanteData);
+                        request.getSession().setAttribute("hr", formatComprovanteHora);
+                        response.sendRedirect("comprovante.jsp");
                     } catch (NumberFormatException e) {
                         e.printStackTrace();
                     }
